@@ -73,3 +73,8 @@ exports.updateProduct = (req, res, next) => {
     res.redirect('/admin/list-product')
 
 }
+
+exports.deleteProduct = (req, res, next) => {
+    Product.remove(+req.body.id)
+    res.redirect('/admin/list-product')
+}
